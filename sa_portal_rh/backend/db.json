@@ -1,0 +1,66 @@
+{
+  "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolver FrontEnd Jr",
+      "foto": "azul.png",
+      "descricao": "Trabalhar com HTML, CSS e JS",
+      "salario": 4000
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "azul.png",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 7000
+    },
+    {
+      "id": "3",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "azul.png",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 10000
+    },
+    {
+      "id": "4",
+      "nome": "Engenherio nuvem",
+      "foto": "azul.png",
+      "descricao": "Trabalhar com Cloud",
+      "salario": 8000
+    }
+  ],
+  "curriculos": [
+    {
+      "id": "1",
+      "nome": "Julia Costa",
+      "formacao": "Bacharelado em Administração",
+      "experiencia": "3 anos como Analista de Marketing",
+      "habilidades": "Gestão de projetos, SEO, Google Analytics",
+      "linkedin": "juliacosta"
+    },
+    {
+      "id": "2",
+      "nome": "Julia Silva",
+      "formacao": "Engenharia de Software",
+      "experiencia": "5 anos como Desenvolvedora Frontend",
+      "habilidades": "Angular, TypeScript, HTML, CSS",
+      "linkedin": "juliasilva"
+    },
+    {
+      "id": "3",
+      "nome": "Laura Costa",
+      "formacao": "Design Gráfico",
+      "experiencia": "4 anos em criação visual e branding",
+      "habilidades": "Adobe Photoshop, Illustrator, UX/UI",
+      "linkedin": "lauracosta"
+    },
+    {
+      "id": "4",
+      "nome": "Laura Silva",
+      "formacao": "Ciência da Computação",
+      "experiencia": "2 anos como Desenvolvedora Backend",
+      "habilidades": "Node.js, MongoDB, API REST",
+      "linkedin": "laurasilvaa"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<h2>Cadastrar</h2>
+
+<!-- formulário para mostrar currículo selecionado -->
+<form #form="ngForm" (ngSubmit)="cadastrarCurriculo()" novalidate>
+  <label for="id">ID</label>
+  <input
+    type="text"
+    name="id"
+    [(ngModel)]="curriculo.id"
+    required
+    #id="ngModel"
+  />
+  <div *ngIf="id.invalid && id.touched" style="color: red;">
+    ID é obrigatório.
+  </div>
+  <br />
+
+  <label for="nome">Nome</label>
+  <input
+    type="text"
+    name="nome"
+    [(ngModel)]="curriculo.nome"
+    required
+    #nome="ngModel"
+  />
+  <div *ngIf="nome.invalid && nome.touched" style="color: red;">
+    Nome é obrigatório.
+  </div>
+  <br />
+
+  <label for="formacao">Formação</label>
+  <input
+    type="text"
+    name="formacao"
+    [(ngModel)]="curriculo.formacao"
+    required
+    #formacao="ngModel"
+  />
+  <div *ngIf="formacao.invalid && formacao.touched" style="color: red;">
+    Formação é obrigatória.
+  </div>
+  <br />
+
+  <label for="experiencia">Experiência</label>
+  <input
+    type="text"
+    name="experiencia"
+    [(ngModel)]="curriculo.experiencia"
+    required
+    #experiencia="ngModel"
+  />
+  <div *ngIf="experiencia.invalid && experiencia.touched" style="color: red;">
+    Experiência é obrigatória.
+  </div>
+  <br />
+
+  <label for="habilidades">Habilidades</label>
+  <input
+    type="text"
+    name="habilidades"
+    [(ngModel)]="curriculo.habilidades"
+    required
+    #habilidades="ngModel"
+  />
+  <div *ngIf="habilidades.invalid && habilidades.touched" style="color: red;">
+    Habilidades são obrigatórias.
+  </div>
+  <br />
+
+  <label for="linkedin">LinkedIn</label>
+  <input
+    type="text"
+    name="linkedin"
+    [(ngModel)]="curriculo.linkedin"
+    required
+    #linkedin="ngModel"
+  />
+  <div *ngIf="linkedin.invalid && linkedin.touched" style="color: red;">
+    LinkedIn é obrigatório.
+  </div>
+  <br />
+
+  <button type="button" (click)="cadastrarCurriculo()">Cadastrar currículo</button>
+  <button type="button" (click)="atualizarCurriculo(curriculo.id)">Atualizar currículo</button>
+  <button type="button" (click)="excluirCurriculo(curriculo.id)">Excluir currículo</button>
+</form>
+
+<!-- Tabela com os currículos já cadastrados -->
+<section class="listar-curriculos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Formação</th>
+        <th>Experiência</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="curriculo-row" *ngFor="let curriculo of curriculos">
+        <td>{{curriculo.id}}</td>
+        <td>{{curriculo.nome}}</td>
+        <td>{{curriculo.formacao}}</td>
+        <td>{{curriculo.experiencia}}</td>
+        <td>
+          <button class="btn-listar" type="button" (click)="listarCurriculoPorId(curriculo)">Listar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="rodape"></div>
