@@ -85,30 +85,5 @@
   <button type="button" (click)="excluirCurriculo(curriculo.id)">Excluir currículo</button>
 </form>
 
-<!-- Tabela com os currículos já cadastrados -->
-<section class="listar-curriculos">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Nome</th>
-        <th>Formação</th>
-        <th>Experiência</th>
-        <th>Ação</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="curriculo-row" *ngFor="let curriculo of curriculos">
-        <td>{{curriculo.id}}</td>
-        <td>{{curriculo.nome}}</td>
-        <td>{{curriculo.formacao}}</td>
-        <td>{{curriculo.experiencia}}</td>
-        <td>
-          <button class="btn-listar" type="button" (click)="listarCurriculoPorId(curriculo)">Listar</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
 
 <div class="rodape"></div>

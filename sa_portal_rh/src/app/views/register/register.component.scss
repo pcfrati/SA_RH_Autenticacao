@@ -1,0 +1,18 @@
+.register-container {
+  max-width: 300px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .erro {
+    color: red;
+    font-size: 0.9rem;
+  }
+}

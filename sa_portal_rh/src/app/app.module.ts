@@ -14,6 +14,8 @@ import { PainelVagasComponent } from './views/painel-vagas/painel-vagas.componen
 import { FormsModule } from '@angular/forms';
 import { CurriculoFormComponent } from './views/curriculo-form/curriculo-form.component';
 import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.co
     HomeComponent,
     PainelVagasComponent,
     CurriculoFormComponent,
-    CurriculoListComponent
+    CurriculoListComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
