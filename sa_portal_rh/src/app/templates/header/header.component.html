@@ -1,9 +1,26 @@
 <nav class="navbar">
-  <a href="/">Curriculos e Vagas</a>
+  <a routerLink="/">Currículos e Vagas</a>
+
   <div class="navItens">
-    <a href="/curriculos" class="navLink">Curriculos</a>
-    <a href="/vagas" class="navLink">Vagas</a>
-    <a href="/curriculo-form" class="navLink small">Form</a>
-    <a href="/curriculo-list" class="navLink small">List</a>
+    <!-- Sempre visível -->
+    <a routerLink="/vagas" class="navLink">Vagas</a>
+
+    <!-- Apenas usuário comum logado -->
+    <a *ngIf="isLoggedIn() && !isAdmin()" routerLink="/curriculo-form" class="navLink">Enviar Currículo</a>
+
+    <!-- Apenas admin -->
+    <a *ngIf="isAdmin()" routerLink="/painel-vagas" class="navLink">Gerenciar Vagas</a>
+    <a *ngIf="isAdmin()" routerLink="/curriculos" class="navLink">Currículos Recebidos</a>
+    <a *ngIf="isAdmin()" routerLink="/curriculo-list" class="navLink">Lista de Currículos</a>
+
+    <!-- Área de autenticação -->
+    <ng-container *ngIf="!isLoggedIn(); else loggedMenu">
+      <a routerLink="/login" class="navLink">Login</a>
+    </ng-container>
+
+    <ng-template #loggedMenu>
+      <span class="navLink">Olá, {{ user?.nome || user?.email }}</span>
+      <button class="navLink" (click)="logout()">Sair</button>
+    </ng-template>
   </div>
 </nav>

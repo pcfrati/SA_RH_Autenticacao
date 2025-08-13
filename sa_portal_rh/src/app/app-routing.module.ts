@@ -8,18 +8,31 @@ import { CurriculoFormComponent } from './views/curriculo-form/curriculo-form.co
 import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.component';
 
 import { PainelVagasComponent } from './views/painel-vagas/painel-vagas.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
-// crio as rotas de navegação
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
+
 const routes: Routes = [
-  {path:"",component: HomeComponent},
-  {path:"vagas", component: VagasComponent},
-  {path:"curriculos", component: CurriculosComponent},
+  { path: '', component: HomeComponent },
+  { path: 'vagas', component: VagasComponent },
 
-  {path:"curriculo-form", component: CurriculoFormComponent},
-  {path:"curriculo-list", component: CurriculoListComponent},
+  // Apenas logado pode cadastrar currículo
+  { path: 'curriculo-form', component: CurriculoFormComponent, canActivate: [AuthGuard] },
 
-  {path:"painel-vagas", component: PainelVagasComponent}
+  // Apenas admin pode ver currículos
+  { path: 'curriculos', component: CurriculosComponent, canActivate: [AdminGuard] },
+  { path: 'curriculo-list', component: CurriculoListComponent, canActivate: [AdminGuard] },
+
+  // Apenas admin pode gerenciar vagas
+  { path: 'painel-vagas', component: PainelVagasComponent, canActivate: [AdminGuard] },
+
+  // Login e Registro liberados
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
