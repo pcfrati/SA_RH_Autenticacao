@@ -1,17 +1,19 @@
+/* home.component.scss */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffd7e6;
+  background-color: transparent;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border:3px solid #ddd; // igual ao da sua imagem
 
   h1 {
     color: #333;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-weight: bold;
 
     @media(max-width: 800px) {
       font-size: 2rem;
@@ -21,6 +23,7 @@
       font-size: 1.5rem;
     }
   }
+
   p {
     color: #555;
     font-size: 1.2rem;
