@@ -20,7 +20,12 @@
 
     <ng-template #loggedMenu>
       <span class="navLink">Olá, {{ user?.nome || user?.email }}</span>
-      <button class="navLink" (click)="logout()">Sair</button>
+      <button class="navLink logout-btn" (click)="logout()">
+  <i class="fa-solid fa-door-open"></i>
+</button>
+
     </ng-template>
   </div>
 </nav>
+
+<script src="https://kit.fontawesome.com/b28c01dff0.js" crossorigin="anonymous"></script>
