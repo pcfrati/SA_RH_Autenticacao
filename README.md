@@ -86,15 +86,3 @@ O projeto será orientado por etapas de:
 | Ferramentas de Design       | Canva |
 
 ---
-
-### 3.3 Diagramas  
-
-📌 *A serem desenvolvidos:*  
-- Diagrama de Classes  
-- Diagrama de Casos de Uso  
-- Diagrama de Fluxo:  
-  - **3.5.1** Autenticação  
-  - **3.5.2** Navegação de Perfil (Admin)  
-  - **3.5.3** Navegação de Perfil (Usuário Comum)  
-
----
